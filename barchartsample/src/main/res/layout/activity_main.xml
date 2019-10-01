@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:barchart="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.ithebk.barchartsample.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#EEE"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="14dp"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:background="@color/colorPrimary"
+        android:text="Tap on the bar to remove"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/tv_hello"
+            android:textSize="10sp"
+            android:text="Add Bar at the End"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:id="@+id/tv_hello_at"
+            android:text="Add Bar At"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/et_add_view_at"
+            android:text="1"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:id="@+id/tv_clear"
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:id="@+id/tv_remove_bar_at"
+            android:text="Remove Bar At"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/et_remove_bar_at"
+            android:text="1"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:id="@+id/tv_update_bar_at"
+            android:text="Update Bar At"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/et_update_bar_at"
+            android:text="1"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Vertical Bar Chart"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+    <HorizontalScrollView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <me.ithebk.barchart.BarChart
+        android:id="@+id/bar_chart_vertical"
+        barchart:bar_type="vertical"
+        barchart:bar_width="15dp"
+        barchart:bar_color="@color/colorPrimary"
+        barchart:bar_text_color="#808080"
+        barchart:bar_text_size="10sp"
+        barchart:bar_show_auto_color="false"
+        barchart:bar_max_value="100"
+        barchart:bar_spaces = "0dp"
+        barchart:bar_show_value="true"
+        barchart:bar_show_animation="true"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Horizontal Bar Chart"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <me.ithebk.barchart.BarChart
+        android:id="@+id/bar_chart_horizontal"
+        barchart:bar_type="horizontal"
+        barchart:bar_max_value="100"
+        barchart:bar_width="20dp"
+        barchart:bar_spaces="0dp"
+        barchart:bar_show_value="true"
+        android:visibility="visible"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"/>
+    </ScrollView>
+
+</LinearLayout>
